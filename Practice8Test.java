@@ -1,12 +1,11 @@
-
+/**
+ * Practice8Test
+ */
 public class Practice8Test {
-	
-	
 	public Graph getGraph(int size) {
 		return new GraphAdjMatrix(size);
 	}
 
-	
 	public boolean createGraphTest() {
 		// Just create a graph and expect it not to blow up...
 		try {
@@ -17,11 +16,10 @@ public class Practice8Test {
 		return true;
 	}
 	
-	
 	public boolean addEdgeTest() {
 		Graph g = getGraph(3);
 		
-		g.addEdge(0,  1);
+		g.addEdge(0, 1);
 		g.addEdge(0, 2);
 		
 		// Check the neighbours...
@@ -40,7 +38,6 @@ public class Practice8Test {
 		return contains1 && contains2 && items == 2;
 	}
 	
-	
 	public void topologicalSortTest() {
 		Graph g = getGraph(3);
 		
@@ -49,7 +46,6 @@ public class Practice8Test {
 		g.addEdge(2, 1);
 		g.topologicalSort();
 	}
-	
 	
 	public void runTest () {
 		int grade = 0;
@@ -79,5 +75,4 @@ public class Practice8Test {
 		Practice8Test test = new Practice8Test();
 		test.runTest();
 	}
-
 }
